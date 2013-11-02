@@ -9,6 +9,7 @@ import de.uulm.mi.web.http.HttpVersion;
 public class BasicHttpResponse implements HttpResponse
 {
 	// TODO: add setters/appropriate constructors
+	private HttpVersion httpVersion;
 
 	@Override
 	public HttpVersion getHttpVersion()
