@@ -1,0 +1,28 @@
+
+
+Starting from GitHub:
+1. Clone from GitHub master
+2. On local repository, branch for your local dev
+3. Do all your dev on local branch
+
+Workflow:
+1. Do local dev in branch, commit often, with comments
+Why? By working only in local branch, you can continue to update your local master with any changes from the origin on Github without immediately applying changes to your local dev branch. Periodically, you should merge your local master to your local dev branch, to pick up new changes. 
+2. When branch is at a sync point (i.e. task completed/functional, no errors, tested), merge branch to (local) master with summary comment
+** this should be a version of the code that runs!!
+3. Pull from origin (git hub) to local master, to get any committed changes. Test changes on local master. Resolve conflicts.
+4. Push local master to 'origin' (github master) - ONLY push tested code, no errors/conflicts.
+
+Things not to do:
+1. Do not push local dev branches to 'origin' (github)
+
+
+Some basic commands:
+1. git status 
+2. git branch (available branches, current)
+3. git add . (add all unstaged changes, new files (that are not ignored) - to staged)
+4. git add filename
+5. git checkout filename (reverts local file to last commit)
+6. git commit -m "commit message" (commit all staged changes with message)
+7. git reset (reset - go read google)
+8. git stash (set aside changes for later work - go read google)
