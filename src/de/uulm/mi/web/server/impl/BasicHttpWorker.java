@@ -22,9 +22,8 @@ public class BasicHttpWorker extends HttpWorker
 	protected HttpRequest parseRequest(InputStream inputStream) throws IOException
 	{
 		// TODO Auto-generated method stub
-		// readLine gives us everything up to the first line feed, in this case the request line
-		String requestLine = readLine(inputStream);
-		return new BasicHttpRequest(requestLine);
+		// BasicHttpRequest is capable of initializing itself directly from a input stream
+		return new BasicHttpRequest(inputStream);
 	}
 
 	@Override

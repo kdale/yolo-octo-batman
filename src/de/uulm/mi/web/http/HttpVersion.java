@@ -47,11 +47,12 @@ public enum HttpVersion
 	public static HttpVersion extractVersion(String requestLine) throws IllegalArgumentException
 	{
 		//TODO: Extract HTTP Version from request line (see http://tools.ietf.org/html/rfc2616.html#section-5.1).
-		String httpVersion = requestLine.substring(requestLine.lastIndexOf(" "), requestLine.length()); 
+		String httpVersion = requestLine.substring(requestLine.lastIndexOf(" "), requestLine.length()).trim(); 
+		
 		
 		//compare our current request http version to our enum values
-		if (httpVersion == VERSION_1_0.toString()) { return VERSION_1_0; }
-		if (httpVersion == VERSION_1_1.toString()) { return VERSION_1_1; }
+		if (httpVersion.equals(VERSION_1_0.toString())) { return VERSION_1_0; }
+		if (httpVersion.equals(VERSION_1_1.toString())) { return VERSION_1_1; }
 		
 		//if we make it this far, something is wrong, throw exception
 		throw new IllegalArgumentException();
